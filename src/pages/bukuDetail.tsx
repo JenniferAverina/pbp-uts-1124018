@@ -54,7 +54,6 @@ export default function BukuDetail() {
             },
         })
         const data = await getuserInfo.json()
-        navigate("/");
     }
 
     const pinjam = async (data: Peminjam) => {
@@ -71,7 +70,6 @@ export default function BukuDetail() {
 
             const data1 = await response.json();
             dispatch(setPosts(data1.peminjam))
-            navigate('/');
 
         } catch (error) {
             console.error("Fetch error:", error);
